@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VillámSolution</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="website icon" type="icon" href="images/ezgif-6-71f2ae52b4-modified.png">
+</head>
+<body>
+    <div class="stilus">
+        <img src="images/thumbnail_Jedlik_logo_2020_200_3c5beeccf8.webp" alt="kep" class="logo">
+        <h1>Bejelentkezés</h1>
+        <form id="loginForm" action="/auth/login" method="POST"> <!-- Use form action for login -->
+            <input type="text" id="username" name="username" placeholder="Felhasználónév" required><br><br>
+            <input type="password" id="password" name="password" placeholder="Jelszó" required><br><br>
+            <button type="submit">Bejelentkezés</button>
+        </form>
+        <script src="js/login.js"></script>
+        <p id="responseMessage"></p>
+    </div>
+</body>
+</html>

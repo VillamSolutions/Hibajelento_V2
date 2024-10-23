@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+    <link rel="website icon" type="icon" href="images/ezgif-6-71f2ae52b4-modified.png">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Kukát tartalmazó terület a bal oldalon -->
+    <div class="trash-container">
+        <img src="images/kuka.png" alt="Kuka" id="trash" ondrop="deleteTaskFromTrash(event)" ondragover="allowDrop(event)">
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <h2>Kiosztatlan</h2>
+            <ul id="todo" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+        </div>
+        <div class="column">
+            <h2>Elkezdett</h2>
+            <ul id="inprogress" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+        </div>
+        <div class="column">
+            <h2>Várakozó</h2>
+            <ul id="waiting" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+        </div>
+        <div class="column">
+            <h2> Befejezett</h2>
+            <ul id="complete" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+        </div>
+    </div>
+
+    <button class="add-task-btn" onclick="window.location.href='form.html'">Új feladat</button>
+    <!--
+    <div class="task-form-container" id="task-form-container"> 
+        <form id="task-form-popup">
+            <input type="text" id="popup-task-input" placeholder="Új feladat neve..." required>
+            <button type="submit">Ok</button>
+            <button type="button" onclick="toggleTaskForm()">Mégse</button>
+        </form>
+    </div> -->
+
+    <!-- Szerkesztési panel felugró -->
+    <div class="edit-task-container" id="edit-task-container" style="display: none;">
+        <form id="edit-task-form">
+            <h3>Feladat részletei</h3>
+            <p id="task-details-name"></p>
+
+              <!-- Felhasználó kiválasztása -->
+              <label for="task-user">Felhasználó:</label>
+              <select id="task-user" required>
+                  <option value="User1">User1</option>
+                  <option value="User2">User2</option>
+                  <option value="User3">User3</option>
+              </select>
+
+            <label for="edit-task-date">Dátum:</label>
+            <input type="date" id="edit-task-date">
+
+            <label for="edit-task-comment">Megjegyzés:</label>
+            <textarea id="edit-task-comment" placeholder="Add a comment..."></textarea>
+
+            <button type="submit">Mentés</button>
+            <button type="button" onclick="toggleEditTaskForm()">Mégse</button>
+
+            <!-- Mentés sikerességi üzenet -->
+            <p id="save-message" style="display:none; color: green;">Sikeresen elmentve!</p>
+        </form>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* Alapbeállítások a testre (sötét háttér, világos szöveg) */
+body {
+    font-family: 'Roboto', sans-serif; /* Google Fonts betűtípus */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #001f3f; /* Sötét kék háttér */
+    color: #ffffff;  /* Világos szöveg */
+}
+
+/* Űrlap konténer (sötétebb szürke háttér, világosabb szegély) */
+.container {
+    background-color: rgba(84, 84, 84, 0.6); /* Sötétszürke, átlátszó háttér a dobozban */
+    padding: 30px;
+    border-radius: 12px;  /* Lekerekített sarkok */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Erősebb árnyék */
+    max-width: 500px;  /* Megnövelt szélesség */
+    width: 70%;
+    height: auto;  /* Automatikus magasság */
+    border: 1px solid #333; /* Sötétebb keret */
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+/* Cím formázás */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;  /* Nagyobb cím méret */
+    color: #ffffff;  /* Fehér cím */
+}
+
+/* Űrlap elemek stílusa */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;  /* Halvány szürke címkék */
+}
+
+input[type="text"],
+textarea,
+select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #444;  /* Sötétszürke keret */
+    border-radius: 8px;  /* Lekerekített input mezők */
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: rgba(212, 211, 211, 0.9);  /* Világos háttér az input mezőknek */
+    color: #000000;  /* Világos szöveg, fekete szín */
+}
+
+/* Középre igazítás az input mezőknél */
+input[type="text"],
+textarea,
+select {
+    text-align: left;  /* Középre igazítás */
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+    border: none; /* Fájl inputnál nem kell keret */
+    color: #ffffff;  /* Világos szöveg */
+}
+
+/* Gomb konténer */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Térköz a gombok között */
+}
+
+/* Beküldés gomb stílus */
+button {
+    padding: 12px;
+    background: rgb(0, 51, 102); /* Sötétkék háttér a gombnak */
+    color: white;
+    border: none;
+    border-radius: 8px;  /* Lekerekített sarkok */
+    cursor: pointer;
+    font-size: 16px;
+    width: 150px;
+    transition: background 0.5s ease, transform 0.5s ease; /* Lassabb animáció */
+    text-align: center;
+}
+
+button:hover {
+    background-color: green; /* Hover zöld */
+}
+
+/* Mégse gomb stílus (szürke) */
+button[type="button"] {
+    background-color: #8b0000;  /* Sötétszürke háttér */
+    color: #e0e0e0;  /* Világos szöveg */
+    border: 1px solid #902929;  /* Halvány szürke keret */
+}
+
+button[type="button"]:hover {
+    background-color: rgb(220, 2, 2);  /* Világosabb szürke hover */
+}
+
+/* Textarea átméretezése */
+textarea {
+    resize: vertical;  /* Csak függőlegesen méretezhető */
+    min-height: 100px;
+}
+
+/* Input mező fókusz stílus */
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: black;  /* Kék szegély fókuszkor */
+    box-shadow: 0 0 5px rgba(5, 5, 5, 0.6); /* Finom lila árnyék fókuszkor */
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Hibabejelentő Űrlap</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="website icon"  type="icon" href="images/ezgif-6-71f2ae52b4-modified.png">
+    <script src="/js/form.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hibabejelentés</h1>
+        <form id="submitform" action="/submit" method="POST" enctype="multipart/form-data">
+            <!-- Hiba rövid megnevezése -->
+            <label for="hiba-nev">Hiba rövid megnevezése:</label>
+            <input type="text" id="hiba-nev" name="hiba-nev" required>
+            
+            <!-- Hiba leírása -->
+            <label for="hiba-leiras">Hiba leírása:</label>
+            <textarea id="hiba-leiras" name="hiba-leiras" rows="4" required></textarea>
+            
+            <!-- Fotó feltöltése -->
+            <label for="hiba-foto">Fotó feltöltése:</label>
+            <input type="file" id="hiba-foto" name="hiba-foto" accept="image/*">
+            
+            <label for="tag">Tag:</label>
+            <select id="tag" name="tag" required>
+                <option value="" disabled selected>Válssz taget</option>
+                <option value="Hardver">Hardver</option>
+                <option value="Szoftver">Szoftver</option>
+                <option value="Egyéb">Egyéb</option>
+            </select>
+
+            <!-- Helyszín legördülő menü -->
+            <label for="helyszin">Helyszín:</label>
+            <select id="helyszin" name="helyszin" required>
+                <option value="" disabled selected>Válassz helyszínt</option>
+                <option value="Iroda">Iroda</option>
+                <option value="Raktár">Raktár</option>
+                <option value="Gyár">Gyár</option>
+                <option value="Egyéb">Egyéb</option>
+            </select>
+
+            <!-- Küldés gomb -->
+            <div class="button-container">
+                <button type="button" onclick="window.history.back()">Mégse</button>
+                <button type="submit">Beküldés</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

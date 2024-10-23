@@ -1,0 +1,87 @@
+/* Reset alapértelmezett stílusok */
+body, h1, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Google Fonts betűtípus */
+    background-color: #001f3f; /* Sötét kék háttér */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2%;
+}
+
+.stilus {
+    text-align: center;
+    background-color: rgba(84, 84, 84, 0.6); /* Sötétszürke, átlátszó háttér a dobozban */
+    border-radius: 1em; /* Lekerekített sarkok */
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); /* Erősebb árnyék a doboz körül */
+    padding: 1.2em;
+    width: 100%;
+    max-width: 22em; /* Szűkebb doboz */
+    user-select: none;
+}
+
+.logo {
+    max-width: 12em; /* Kép maximális szélessége */
+    height: auto;
+    margin-bottom: 1.2em;
+    user-select: none;
+}
+
+h1 {
+    margin-bottom: 0.8em;
+    color: #ffffff; /* Világos szín a címsornak */
+    font-size: 1.6em;
+    font-weight: bold;
+    user-select: none;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    width: 80%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #444; /* Sötétebb keret az input mezőknél */
+    background-color: #333; /* Sötétebb háttér az input mezőknek */
+    color: #ffffff; /* Világos szöveg az input mezőkben */
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border: 1px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Fókusz állapot: kék árnyék */
+}
+
+button {
+    display: inline;
+    width: 60%;
+    padding: 0.7em;
+    margin: 0.6em 0;
+    font-size: 0.85em;
+    color: #ffffff;
+    background: rgb(0, 51, 102); /* Sötétkék háttér a gombnak */
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+
+button:hover {
+    background: rgb(0, 128, 255); /* Hover állapot: világosabb kék */
+}
+
+a {
+    text-decoration: none;
+    color: #ff5733; /* Piros szín a linkekhez */
+    font-weight: bold;
+    font-size: 0.85em;
+}

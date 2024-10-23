@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #001f3f; /* Sötét kék háttér */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.column {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Üvegszerű megjelenés */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Finom árnyék */
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+/* Az Add Task gomb rögzítve a jobb alsó sarokban */
+/* Az Add Task gomb rögzítve a jobb alsó sarokban */
+.add-task-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5c5c;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+    background-color: #ff3b3b;
+}
+
+/* Rejtett feladat hozzáadási űrlap */
+.task-form-container {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Form input mezők stílusai */
+#task-form-popup input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+}
+
+/* Submit és Cancel gombok stílusa */
+#task-form-popup button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#task-form-popup button[type="submit"] {
+    background-color: #0565c4;
+    margin-right: 10px;
+}
+
+#task-form-popup button[type="submit"]:hover {
+    background-color: #054a96;
+}
+
+#task-form-popup button[type="button"] {
+    background-color: #ff5c5c;
+}
+
+#task-form-popup button[type="button"]:hover {
+    background-color: #ff3b3b;
+}
+
+/* Feladatlista stílus */
+.task-list {
+    list-style-type: none;
+    min-height: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow-y: auto;
+    user-select: none;
+}
+
+.task-list li {
+    padding: 12px;
+    background-color: #444;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: move;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+.task-list li:hover {
+    background-color: #555;
+}
+/* Kuka stílus */
+.trash-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.trash-container img {
+    width: 60px;
+    /*height: 45px;*/
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+/* Szerkesztési panel stílusa */
+.edit-task-container {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Horizontálisan és vertikálisan középre helyez */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.edit-task-container h3 {
+    color: white;
+}
+
+.edit-task-container input, .edit-task-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+}
+
+.edit-task-container button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff;
+}
+
+.edit-task-container button[type="button"] {
+    background-color: #dc3545;
+}
+/* Felhasználó kiválasztásának stílusa */
+#task-user {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none; /* A böngésző alapértelmezett nyílának eltávolítása */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjQxIiB2aWV3Qm94PSIwIDAgMjQgNDEiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4yMSAxOWwzLjQyIDMuNDFhMSAxIDAgMDAxLjQxIDBsMy40My0zLjQxYTQuOTIgNC45MiAwIDAxNi45NSAwIDQuOTIgNC45MiAwIDAxMCw2Ljk1TDEyLjcwIDMyLjcgYS40NC40NCAwIDAxLS42MyAwTDUuMjYgMjUuOTRhNC45MiA0LjkyIDAgMDEwLTYuOTUgNC45MiA0LjkyIDAgMDE2Ljk1IDB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+#task-user option {
+    background-color: rgba(0, 0, 0, 0.8); /* Fekete háttér a lenyíló opcióknak */
+    color: white;
+    padding: 10px;
+}
+
+/* Fókuszállapot */
+#task-user:focus {
+    border: 1px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Kék árnyék fókuszban */
+}
+
