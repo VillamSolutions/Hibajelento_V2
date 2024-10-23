@@ -6,5 +6,5 @@ Ide lesz gyüjtve mindig a legfrisebb verzió melyet én (AstruntCM) (Mayer Marc
 
 Ide légyszives ne töltsetek fel fájlokat manuálisan, ha szeretnétek feltölteni frissítést akkor jelezzétek nekem és akkor elmagyarázom hogy hogyan lehetséges.
 
-Letölteni/Clone-ni a kodót szabad. Command hozzá: git clone (https-s url-je a reponak) --> Ehez szükséges rendelkezni GIT-tel a gépen.
+Letölteni/Clone-ni a kodót szabad. Command hozzá: git clone https://github.com/VillamSolutions/Hibajelento_V2.git --> Ehez szükséges rendelkezni GIT-tel a gépen.
 
