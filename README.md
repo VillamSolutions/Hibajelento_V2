@@ -1,4 +1,6 @@
-Hibajelento_V2 repo.
+Hibajelento_V2 repo
+
+Légyszives olvassátok el mielött csinálnátok valamit vele!!
 
 Ide lesz gyüjtve mindig a legfrisebb verzió melyet én (AstruntCM) (Mayer Marci) fogom csinálni a verzió követés miatt.
 
